@@ -1,0 +1,9 @@
+# Claude Code local files
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS files
+.DS_Store
+
+# Node (if experiments use it)
+node_modules/
