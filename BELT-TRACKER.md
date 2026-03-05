@@ -9,8 +9,8 @@
 🟨 Yellow Belt   — CLAUDE.md, knows tools exist                  ✅ DONE
 🟩 Green Belt    — Rules, memory, permissions configured         ✅ DONE
 🟦 Blue Belt     — Skills, hooks, agents, MCP built              ✅ DONE (Session 1-3)
-🟫 Brown Belt    — Prompting strategies, modes, context mastery  🔄 IN PROGRESS
-⬛ Black Belt    — Full autonomous workflows at scale            ⬜ NOT STARTED
+🟫 Brown Belt    — Prompting strategies, modes, context mastery  ✅ DONE (Session 3)
+⬛ Black Belt    — Full autonomous workflows at scale            🔄 NEXT (hands-on in minihub)
 ```
 
 ---
