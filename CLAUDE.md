@@ -119,6 +119,16 @@ You'll have full context of who I am and everything I've learned.
 claude --add-dir ~/Desktop/mrt_repo/claude-lab
 ```
 
+## Session Handoff
+
+At the **START** of every session, read `HANDOFF.md` first to pick up where we left off.
+
+At the **END** of every session (or when Amrit says "update handoff"), update `HANDOFF.md` with:
+- What we did this session
+- Current state
+- What's next
+- Any unpushed commits
+
 ## When I Ask You Something Here
 
 1. **Check my knowledge level** — Read the "What I Know" section above before explaining
