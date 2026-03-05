@@ -363,9 +363,54 @@ Cycle permission modes with `Shift+Tab`:
 - `ide` — VS Code integration
 
 ### Current Custom Agents
-- None defined yet
 
-### Potential Custom Agents
-- `chat-tester` — Test chat tools against Postgres with read-only assertions
+#### 1. security-reviewer (Implemented 2026-03-05)
+
+**Scope:** Personal (`~/.claude/agents/security-reviewer.md`) — available in all projects
+**Model:** Sonnet (cheaper than Opus — doesn't need deep reasoning, just pattern matching)
+**Permission mode:** `plan` (read-only — can LOOK but never TOUCH)
+**Max turns:** 15
+
+**What it checks:**
+1. SQL injection (string concatenation, missing parameterisation)
+2. Access control (missing location scoping, missing auth, privilege escalation)
+3. Sensitive data exposure (unmasked card/BSB/bank numbers, secrets in logs)
+4. Input validation (missing validation, type coercion, missing range checks)
+5. Soft-delete bypass (missing `__hevo__marked_deleted` or `is_deleted` filters)
+
+**Output format:** `[SEVERITY] Category — file:line` with description and fix suggestion.
+Severity levels: CRITICAL > HIGH > MEDIUM > LOW.
+
+**How to use:**
+```bash
+# Start a full session as the security reviewer
+claude --agent security-reviewer
+
+# Or ask Head Chef to delegate (auto — description triggers it)
+"Review the chat tool files for security issues"
+```
+
+**How we built it:**
+1. Created `~/.claude/agents/` directory (didn't exist yet)
+2. Created `security-reviewer.md` with YAML frontmatter + markdown body
+3. Chose personal scope (`~/.claude/agents/`) so it follows Amrit to every project
+4. Set `model: sonnet` — security scanning is pattern matching, doesn't need Opus
+5. Set `permissionMode: plan` — reviewer should NEVER modify code, only report
+6. Set `tools: Read, Grep, Glob` — restricted tool belt (no Bash, no Edit, no Write)
+7. Wrote training manual covering 5 security categories relevant to our projects
+8. Defined output format with severity levels and file:line references
+
+**Key design decisions:**
+- **Why Sonnet?** Security reviewing is structured checking, not creative reasoning. Sonnet is faster and cheaper. If it misses things, we upgrade to Opus later.
+- **Why plan mode?** A security reviewer that can edit files defeats the purpose. `plan` mode is a hard constraint — even if the instructions say "don't edit", plan mode enforces it at the system level.
+- **Why personal scope?** SQL injection and access control issues exist in all our repos, not just minihubvone. Personal scope = one agent, all kitchens.
+- **Why no Bash?** A reviewer doesn't need to run commands. Read + Grep + Glob is enough to find every vulnerability pattern.
+
+**Amrit's mental model:**
+- "Custom agents = permanent specialist hires with a training manual"
+- "Built-in sous chefs = temp workers from an agency — brief them every time"
+- "The agent file = their personnel file: name badge, tool belt, access level, training manual"
+
+### Potential Custom Agents (Next)
+- `chat-tool-tester` — Test chat tools for correctness and rule compliance (project scope in minihubvone)
 - `doc-reviewer` — Review docs-internal/ for accuracy against codebase
-- `security-auditor` — Check for SQL injection, unmasked data, missing location scoping
