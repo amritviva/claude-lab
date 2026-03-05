@@ -19,7 +19,7 @@
 
 > Goal: Understand every power tool Claude Code offers, so when you build minihub chat, you know EXACTLY which weapon to reach for.
 
-### Prompting Strategies
+### Prompting Strategies ✅ COMPLETE (all 5)
 
 | # | Topic | Status | Notes |
 |---|-------|--------|-------|
@@ -27,35 +27,36 @@
 | 2 | Verification patterns — test-first, screenshot, root cause | ✅ | `concepts/VERIFICATION-THE-EYES.md` + rules added to minihub CLAUDE.md |
 | 3 | Interview pattern — let Claude ask YOU questions | ✅ | `concepts/INTERVIEW-THE-CONSULTANT.md` |
 | 4 | PowerPoint trace — step-by-step request flow | ✅ | `concepts/POWERPOINT-TRACE-THE-SLIDES.md` |
-| 5 | Reference existing patterns — point Claude to examples | ⬜ | "Follow the pattern in payment.handler.ts" |
+| 5 | Reference existing patterns — point Claude to examples | ✅ | `concepts/REFERENCE-PATTERNS-THE-HOMEWORK.md` |
 
-### Context Management
-
-| # | Topic | Status | Notes |
-|---|-------|--------|-------|
-| 6 | What eats context — files, MCP, conversation, rules | ⬜ | Know your budget |
-| 7 | /clear, /compact, /context — when to use which | ⬜ | The janitor tools |
-| 8 | Subagents for investigation — keep main context clean | ⬜ | Delegate research, get summaries |
-| 9 | CLAUDE.md size discipline — under 200 lines | ⬜ | Skills > bloated CLAUDE.md |
-| 10 | Rewind (Esc+Esc) — course correction | ⬜ | Undo without losing everything |
-
-### Advanced Modes
+### Context Management ✅ COMPLETE (all 5 + bonus session bridges)
 
 | # | Topic | Status | Notes |
 |---|-------|--------|-------|
-| 11 | Batch mode (/batch) — parallel agents, worktrees, PRs | ⬜ | For large-scale migrations |
-| 12 | Worktree mode (--worktree) — isolated branches | ⬜ | Parallel feature work |
-| 13 | Background tasks (Ctrl+B) — multitask | ⬜ | Run long tasks while you work |
-| 14 | Task system (Ctrl+T) — track multi-step work | ⬜ | Claude's built-in TODO list |
+| 6 | What eats context — files, MCP, conversation, rules | ✅ | `concepts/CONTEXT-THE-DESK.md` |
+| 7 | /clear, /compact, /context — when to use which | ✅ | Covered in CONTEXT-THE-DESK.md (5 strategies) |
+| 8 | Subagents for investigation — keep main context clean | ✅ | Covered in CONTEXT-THE-DESK.md (intern analogy) |
+| 9 | CLAUDE.md size discipline — under 200 lines | ✅ | Covered in CONTEXT-THE-DESK.md (keep rent low) |
+| 10 | Rewind (Esc+Esc) — course correction | ✅ | `concepts/REWIND-THE-TIME-MACHINE.md` |
+| 10b | Session bridges — carry context across sessions | ✅ | `concepts/SESSION-BRIDGES-THE-HANDOFF.md` + handoff rule in minihub |
 
-### Real-World Patterns
+### Advanced Modes ✅ COMPLETE (all 4)
 
 | # | Topic | Status | Notes |
 |---|-------|--------|-------|
-| 15 | CLAUDE.md vs per-message instructions | ⬜ | What goes where |
-| 16 | Decision tree — which mode for which task | ⬜ | Quick reference |
-| 17 | Slash commands cheat sheet | ⬜ | /clear /compact /context /cost /diff /rewind |
-| 18 | Keyboard shortcuts muscle memory | ⬜ | Ctrl+T, Shift+Tab, Esc+Esc, Alt+P |
+| 11 | Batch mode (/batch) — parallel agents, worktrees, PRs | ✅ | `concepts/ADVANCED-MODES-THE-HEAVY-WEAPONS.md` |
+| 12 | Worktree mode (--worktree) — isolated branches | ✅ | Covered in ADVANCED-MODES doc (parallel desks) |
+| 13 | Background tasks (Ctrl+B) — multitask | ✅ | Covered in ADVANCED-MODES doc (oven timer) |
+| 14 | Task system (Ctrl+T) — track multi-step work | ✅ | Covered in ADVANCED-MODES doc (IKEA checklist) |
+
+### Real-World Patterns ✅ COMPLETE (all 4)
+
+| # | Topic | Status | Notes |
+|---|-------|--------|-------|
+| 15 | CLAUDE.md vs per-message instructions | ✅ | `concepts/CLAUDEMD-VS-MESSAGE-RULEBOOK-VS-STICKY.md` |
+| 16 | Decision tree — which mode for which task | ✅ | `concepts/DECISION-TREE-WHICH-WEAPON.md` |
+| 17 | Slash commands cheat sheet | ✅ | Covered in DECISION-TREE doc (all commands) |
+| 18 | Keyboard shortcuts muscle memory | ✅ | Covered in DECISION-TREE doc (all shortcuts) |
 
 ---
 
@@ -81,17 +82,74 @@
 ## Progress Summary
 
 ```
-Brown Belt:  4/18 concepts covered
+Brown Belt:  18/18 concepts covered ✅ COMPLETE
 Black Belt:  0/10 challenges completed
-Overall:     Blue Belt (features learned) → working towards Brown (concepts mastered)
+Overall:     Brown Belt ACHIEVED → Black Belt unlocks through real work in minihub
+```
+
+---
+
+## Brown Belt Summary — What You Now Know
+
+```
+✅ Prompting Strategies    (5/5)  — Plan, Verify, Interview, Trace, Reference
+✅ Context Management      (6/6)  — Desk budget, /clear, /compact, subagents, rewind, session bridges
+✅ Advanced Modes          (4/4)  — Batch, worktree, background, tasks
+✅ Real-World Patterns     (4/4)  — CLAUDE.md vs message, decision tree, shortcuts, commands
+```
+
+### Concept Docs Created (10 docs)
+
+| Doc | Analogy | File |
+|-----|---------|------|
+| Plan Mode | War Room | `concepts/PLAN-MODE-THE-WAR-ROOM.md` |
+| Verification | Giving Claude Eyes | `concepts/VERIFICATION-THE-EYES.md` |
+| Interview | The Consultant | `concepts/INTERVIEW-THE-CONSULTANT.md` |
+| PowerPoint Trace | The Slide Deck | `concepts/POWERPOINT-TRACE-THE-SLIDES.md` |
+| Reference Patterns | Copy the Homework | `concepts/REFERENCE-PATTERNS-THE-HOMEWORK.md` |
+| Context Management | The Desk Budget | `concepts/CONTEXT-THE-DESK.md` |
+| Session Bridges | The Handoff | `concepts/SESSION-BRIDGES-THE-HANDOFF.md` |
+| Rewind | The Time Machine | `concepts/REWIND-THE-TIME-MACHINE.md` |
+| Advanced Modes | The Heavy Weapons | `concepts/ADVANCED-MODES-THE-HEAVY-WEAPONS.md` |
+| Decision Tree | Which Weapon? | `concepts/DECISION-TREE-WHICH-WEAPON.md` |
+| CLAUDE.md vs Message | Rulebook vs Sticky Note | `concepts/CLAUDEMD-VS-MESSAGE-RULEBOOK-VS-STICKY.md` |
+
+### The Master Workflow (baked into minihub CLAUDE.md)
+
+```
+Interview → Trace → Plan → Reference → Build → Verify → Handoff
+(what?)     (flow?)  (how?)  (match)     (do)    (prove)   (save)
+```
+
+### The Cheat Card (screenshot this)
+
+```
+┌─────────────────────────────────────────────────────┐
+│  CLAUDE CODE — WHICH WEAPON?                        │
+│                                                     │
+│  Small (1-2 files)     → Just do it (Normal Mode)   │
+│  Medium (3-10 files)   → Plan Mode first (Shift+Tab)│
+│  Large (10+ same)      → /batch (assembly line)     │
+│                                                     │
+│  Running tests?        → Ctrl+B (background)        │
+│  Two features?         → --worktree (parallel desk) │
+│  Multi-step project?   → Ctrl+T (task list)         │
+│                                                     │
+│  New feature?          → Interview → Trace → Plan   │
+│  Wrong path?           → Esc+Esc (rewind)           │
+│  New session?          → Read HANDOFF.md first      │
+│  End session?          → "update handoff"           │
+│  Switching tasks?      → /clear                     │
+│  Context heavy?        → /compact                   │
+│  Need research?        → Subagent (send an intern)  │
+└─────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## How to Use This File
 
-- Work through Brown Belt topics in any order (sidetrack freely)
-- Come back and check items off as you go
+- Brown Belt is DONE — you understand Claude's full power
 - Black Belt items unlock naturally while building minihub chat
-- When all Brown Belt items are ✅ → you understand Claude's full power
-- When all Black Belt items are ✅ → you've proven it in battle
+- Check off Black Belt challenges as you use them in real work
+- When all 10 Black Belt items are ✅ → you've proven it in battle
