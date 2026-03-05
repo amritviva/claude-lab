@@ -360,7 +360,19 @@ Cycle permission modes with `Shift+Tab`:
 ## Our Setup (minihubvone)
 
 ### Current MCP Servers
-- `ide` — VS Code integration
+
+#### 1. ide (VS Code integration)
+- **Scope:** Project (auto-installed by VS Code extension)
+- **Tools:** `getDiagnostics`, `executeCode`
+
+#### 2. github (Installed 2026-03-05)
+- **Scope:** User (`~/.claude.json`) — available in all repos, all sessions
+- **Transport:** HTTP (remote — GitHub runs the server)
+- **URL:** `https://api.githubcopilot.com/mcp/`
+- **Auth:** OAuth (browser login on first use)
+- **Cost:** Free (uses your GitHub account permissions)
+- **Per-machine:** New laptop = reinstall with `claude mcp add --transport http --scope user github https://api.githubcopilot.com/mcp/`
+- **What it gives you:** PRs, issues, code search, comments, repo management — all as typed MCP tools instead of raw `gh` CLI via Bash
 
 ### Current Custom Agents
 
